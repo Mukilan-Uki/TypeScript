@@ -1,8 +1,10 @@
-class Circle extends GeometricObject {
+import { GeometricObject } from "./geometricObject";
+
+export class Circle extends GeometricObject {
   private radius: number;
 
-  constructor(radius: number = 1.0, color: string = "white", filled: boolean = false) {
-    super(color, filled);
+  constructor(radius: number, color: string, filled: boolean) {
+    super(color,filled);
     this.radius = radius;
   }
 
@@ -15,7 +17,7 @@ class Circle extends GeometricObject {
   }
 
   public getArea(): number {
-    return Math.PI * this.radius * this.radius;
+    return Math.PI * Math.pow(this.radius,2);
   }
 
   public getPerimeter(): number {
@@ -27,6 +29,6 @@ class Circle extends GeometricObject {
   }
 
   public printCircle(): void {
-    console.log(`The circle was created on ${this.getDateCreated()} and the radius is ${this.radius}`);
+    console.log("Circle radius: "+this.radius);
   }
 }

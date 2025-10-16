@@ -1,18 +1,20 @@
-const circle = new Circle(5.0, "red", true);
-console.log("A Circle:");
-circle.printCircle();
-console.log("Color:", circle.getColor());
-console.log("Filled:", circle.isFilled());
-console.log("Area:", circle.getArea().toFixed(2));
-console.log("Perimeter:", circle.getPerimeter().toFixed(2));
+import { Circle } from "./Day3/circle";
+import { Rectangle } from "./Day3/rectangle";
 
-console.log("\n---------------------------\n");
+console.log("Circle Example");
+console.log("\t");
 
-const rectangle = new Rectangle(4.0, 6.0, "blue", false);
-console.log("A Rectangle:");
-console.log("Width:", rectangle.getWidth());
-console.log("Height:", rectangle.getHeight());
-console.log("Color:", rectangle.getColor());
-console.log("Filled:", rectangle.isFilled());
-console.log("Area:", rectangle.getArea().toFixed(2));
-console.log("Perimeter:", rectangle.getPerimeter().toFixed(2));
+const circle1 = new Circle(5, "blue", true);
+circle1.printCircle();
+console.log("Area:", Math.floor(circle1.getArea()));
+console.log("Perimeter:", Math.floor(circle1.getPerimeter()));
+console.log(circle1.toString());
+
+console.log("\n");
+
+console.log("Rectangle Example");
+console.log("\t");
+const rectangle1 = new Rectangle(4, 6, "red", false);
+console.log("Area:", rectangle1.getArea());
+console.log("Perimeter:", rectangle1.getPerimeter());
+console.log(rectangle1.toString());

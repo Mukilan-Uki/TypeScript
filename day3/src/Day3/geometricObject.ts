@@ -1,9 +1,9 @@
-class GeometricObject {
+export class GeometricObject {
   private color: string;
   private filled: boolean;
   private dateCreated: Date;
 
-  constructor(color: string = "white", filled: boolean = false) {
+  constructor(color: string, filled: boolean) {
     this.color = color;
     this.filled = filled;
     this.dateCreated = new Date();
@@ -30,7 +30,6 @@ class GeometricObject {
   }
 
   public toString(): string {
-    return `created on ${this.dateCreated.toLocaleString()}, color: ${this.color}, filled: ${this.filled}`;
+    return "Color: "+this.color+" Filled: "+this.filled+" Created: "+this.dateCreated.toDateString();
   }
 }
-
